@@ -1,7 +1,9 @@
 // tailwind.config.js
-module.exports = {
-    purge: [],
-    darkMode: false,
+export default {
+    content: [
+        "./index.html",
+        "./src/**/*.{vue,js,ts,jsx,tsx}",
+    ],
     theme: {
         extend: {
             colors: {
