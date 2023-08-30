@@ -1,11 +1,11 @@
 <template>
-  <div class="flex flex-col max-w-7xl mx-auto mt-10 mb-10">
+  <div class="flex flex-col max-w-7xl mx-auto py-28">
     <div class="w-full p-4 space-y-5">
       <div class="space-y-3 pb-6">
         <h2 class="text-4xl font-bold text-center">
           {{ $t("tariff.header") }}
         </h2>
-        <p class="text-md text-center sm:text-sm md:text-md">
+        <p class="text-lg text-center font-medium text-gray-700">
           {{ $t("tariff.headerDescribe") }}
         </p>
       </div>

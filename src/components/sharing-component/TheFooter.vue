@@ -1,74 +1,73 @@
 <template>
-  <div class="">
-    <div class="lg:grid lg:grid-cols-5 max-w-7xl mx-auto ">
-      <div class="relative block h-32 lg:col-span-2 lg:h-full">
+  <div class="bg-primary">
+    <div class="lg:grid lg:grid-cols-5 max-w-7xl mx-auto">
+      <div class="relative block h-32 lg:col-span-2 lg:h-full p-10">
         <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1521.1931148302822!2d69.64774895353585!3d40.31158499129011!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38b1b3e7b78c22d3%3A0x7680552d5de892d5!2sKarimov%20Group!5e0!3m2!1sru!2s!4v1692866284034!5m2!1sru!2s"
-            class="border-0 w-full h-full p-16 " loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1521.1931148302822!2d69.64774895353585!3d40.31158499129011!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38b1b3e7b78c22d3%3A0x7680552d5de892d5!2sKarimov%20Group!5e0!3m2!1sru!2s!4v1692866284034!5m2!1sru!2s"
+          class="w-full h-full rounded-lg" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </div>
-      <div class="px-4 py-16 sm:px-6 lg:col-span-3 lg:px-8">
+      <div class="px-4 py-20 sm:px-6 lg:col-span-3 lg:px-0">
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
           <div>
             <p>
-              <span class="text-xs uppercase tracking-wide text-gray-500">
-                  О нас
+              <span class="text-md uppercase tracking-wide text-gray-100">
+                {{ $t(aboutUs) }}
               </span>
-              <a href="#" class="block text-2xl font-medium text-gray-900 hover:opacity-75 sm:text-3xl">
+              <a href="/" class="block text-2xl font-medium text-white hover:opacity-75 sm:text-4xl">
                 iki taxi
               </a>
+            <p class=" text-gray-200">{{ $t(contactInfoList) }}</p>
             </p>
 
             <ul class="mt-8 flex gap-6">
               <li v-for="(social, index) in socialLinks" :key="index">
-                <a :href="social.url" rel="noreferrer" target="_blank"
-                   class="text-gray-700 transition hover:opacity-75">
+                <a :href="social.url" rel="noreferrer" target="_blank" class="text-gray-100 transition hover:opacity-75">
                   <span class="sr-only">{{ social.name }}</span>
                   <svg class="h-6 w-6" :fill="social.fillColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path :d="social.iconPath"/>
+                    <path :d="social.iconPath" />
                   </svg>
                 </a>
               </li>
             </ul>
           </div>
+
           <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
-              <p class="font-medium text-gray-900">Company</p>
-              <ul class="mt-6 space-y-4 text-sm">
+              <p class="font-medium text-gray-200">{{ $t(company) }}</p>
+              <ul class="mt-6 space-y-4 text-md">
                 <li v-for="(link, index) in links" :key="index" class="">
-                  <a rel="noopener noreferrer" :href="link.href"
-                     class="text-gray-700 transition hover:opacity-75 cursor-pointer">
+                  <router-link :to="link.href"
+                    class="text-white transition hover:opacity-75 cursor-pointer">
                     {{ $t(link.name) }}
-                  </a>
+                  </router-link>
                 </li>
               </ul>
             </div>
             <div>
-              <p class="font-medium text-gray-900">Contacts</p>
-              <ul class="mt-6 space-y-4 text-sm">
-
+              <p class="font-medium text-gray-200">{{ $t(contact) }}</p>
+              <ul class="mt-6 space-y-4 text-md">
                 <li v-for="(contact, index) in contacts" :key="index" class="">
-                  <a rel="noopener noreferrer" class="text-gray-700 transition hover:opacity-75">
-                    <p class="">{{ contact.text }}</p>
-                    {{ contact.value }}
+                  <a rel="noopener noreferrer" class="text-white transition">
+                    <p class="">{{ $t(contact.text) }}</p>
+                    {{ $t(contact.value) }}
                   </a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-
         <div class="mt-12 border-t border-gray-100 pt-12">
           <div class="sm:flex sm:items-center sm:justify-between">
             <ul class="flex flex-wrap gap-4 text-xs">
               <li v-for="(link, index) in addLinks" :key="index">
-                <a :href="link.url" class="text-gray-500 transition hover:opacity-75">
+                <a :href="link.url" class="text-white transition hover:opacity-75">
                   {{ link.label }}
                 </a>
               </li>
             </ul>
 
-            <p class="mt-8 text-xs text-gray-500 sm:mt-0">
+            <p class="mt-8 text-xs text-white sm:mt-0">
               &copy; {{ currentYear }}. {{ companyName }}. All rights reserved.
             </p>
           </div>
@@ -83,12 +82,12 @@ export default {
   data() {
     return {
       addLinks: [
-        {label: "Terms & Conditions", url: "#"},
-        {label: "Privacy Policy", url: "#"},
-        {label: "Cookies", url: "#"}
+        { label: "Terms & Conditions", url: "#" },
+        { label: "Privacy Policy", url: "#" },
+        { label: "Cookies", url: "#" }
       ],
       currentYear: new Date().getFullYear(),
-      companyName: "Company Name",
+      companyName: "iki taxi",
       links: [
         { name: "navbar.links.0.name", href: '/' },
         { name: "navbar.links.1.name", href: 'driver' },
@@ -96,23 +95,14 @@ export default {
 
       ],
       contacts: [
+        { text: "footer.contacts.0.text", value: "footer.contacts.0.value", },
         {
-          text: "Адрес:",
-          value: "Tajikistan, Khujand, \"Rohi Abreshim\" Bus Station",
-        },
-        {
-          text: "Телефон:",
+          text: "footer.contacts.1.text",
           value: "+(992) 4000 60000",
         },
         {
           text: "Email:",
           value: "info@taxicompany.com",
-        },
-      ],
-      contactInfoList: [
-        {
-          label: "iki Такси - это современная и надежная компания, предоставляющая высококачественные услуги по пассажирским перевозкам.",
-          value: "",
         },
       ],
       socialLinks: [
@@ -146,8 +136,13 @@ export default {
           fillColor: "currentColor",
           iconPath: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
         }
-      ]
+      ],
+      contactInfoList: "footer.contactInfoList",
+      company: 'footer.company',
+      contact: 'footer.contact',
+      aboutUs: 'footer.aboutUs'
     };
   }
 };
 </script>
+

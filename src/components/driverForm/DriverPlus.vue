@@ -1,18 +1,19 @@
 <template>
-<div class="">
+<div class="py-20">
   <div class="max-w-7xl flex flex-wrap items-center justify-center mx-auto md:px-6 md:flex-row my-auto">
-    <div class="lg:w-6/12">
+    <div class="lg:w-7/12  wow animate__animated animate__fadeInLeftBig">
       <img src="@/assets/images/cars/WAN.png" class="h-auto md:hidden " alt="iki taxi">
       <img src="@/assets/images/cars/WAN.png" class="hidden md:block mx-auto w-full float-right " alt="iki taxi">
     </div>
-    <div class="lg:mb-0 lg:w-6/12 space-y-5">
+
+    <div class="lg:mb-0 lg:w-5/12">
       <h1
-          class="w-full text-4xl leading-none text-secondary font-bold
+          class="w-full text-4xl leading-none text-secondary font-bold  wow animate__animated animate__fadeInDown animate__delay-1s
           text-center lg:text-5xl lg:text-left lg:leading-tight mb-5"
       >
         {{ $t("driverForm.header") }}
       </h1>
-      <ul class="w-full text-lg text-center text-secondary space-y-2 lg:text-left pl-5">
+      <ul class="w-full text-lg text-center text-secondary space-y-4 lg:text-left pl-5 wow animate__animated animate__fadeInDown animate__delay-2s">
         <li v-for="(item) in items" :key="item.title" class="grid" style="grid-template-columns: 1fr 7fr;column-gap: 20px;align-items: center;">
           <svg class="w-full h-fit" viewBox="0 0 1800 700" fill="black" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -31,15 +32,9 @@
             <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M913.655 418.987L1072.14 260.496C1077.95 254.666 1081.22 246.771 1081.22 238.542C1081.22 230.309 1077.95 222.414 1072.14 216.584L913.655 58.0961C907.835 52.2831 899.935 49.0171 891.695 49.0171C883.465 49.0171 875.571 52.2831 869.745 58.0961L711.253 216.584C705.44 222.414 702.174 230.309 702.174 238.542C702.174 246.775 705.44 254.67 711.253 260.5L869.745 418.987C875.571 424.797 883.465 428.067 891.695 428.067C899.935 428.067 907.825 424.797 913.655 418.987ZM875.902 141.934H850.285V303.327H875.902V251.025H876.329L917.105 303.327H951.055L904.295 247.396L948.275 200.855H915.395L875.902 243.338V141.934Z"/>
           </svg>
-          <span class="text-lg">{{ $t(item.title) }}</span>
+          <span class="text-lg sm:text-left">{{ $t(item.title) }}</span>
         </li>
       </ul>
-      <button
-          class="bg-white text-primary font-medium px-6 py-3 rounded-full border-2 items-center">
-        <a href="#qr">
-          {{ $t("driverForm.linkText") }}
-        </a>
-      </button>
     </div>
   </div>
 </div>

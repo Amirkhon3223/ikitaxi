@@ -1,34 +1,68 @@
 <template>
-  <div class="max-w-7xl mx-auto p-6 sm:py-12 lg:pt-32 flex flex-col lg:flex-row justify-between ">
-    <div class="lg:mb-0 lg:w-5/12 lg:pr-12 animate__animated animate__fadeIn animate__delay-1s">
-
-      <h1 class="w-full text-4xl text-secondary font-bold text-center lg:text-5xl lg:text-left lg:leading-tight mb-5">
-        {{ $t("heroSection.title") }}
+  <div class="bg-white dark:bg-primary relative items-center overflow-hidden py-20">
+    <div class="max-w-7xl mx-auto flex relative items-center mt-32">
+      <h1 class="uppercase sm:text-8xl font-black text-white w-full items-center">
+        <span class="lg:text-7xl sm:text-7xl">{{ $t("heroSection.title") }}</span>
       </h1>
+    </div>
+    <div class="max-w-7xl mx-auto flex relative">
+      <div class="sm:w-2/3 lg:w-2/4 flex flex-col relative mt-10 WOW animate__animated animate__fadeIn animate__delay-1s">
+        <span class="w-28 h-2 bg-gray-800 dark:bg-white mb-6"></span>
+        <p class="text-xl font-medium text-gray-200">
+          {{ $t("heroSection.description") }}
+        </p>
+      </div>
 
-      <p class="w-full text-xl text-center text-secondary lg:text-left">
-        {{ $t("heroSection.description") }}
-      </p>
+      <div class="hidden sm:block sm:w-1/3 lg:w-full relative items-center wow animate__animated animate__fadeInLeftBig">
+        <img src="@/assets/images/statticSuv.gif" class="m-auto relative -top-28 left-20 scale-[1.2]" alt="iki taxi, iki, taxi, taxi tajikistan"/>
+      </div>
 
     </div>
-
-    <div class="lg:w-7/12 pl-3 animate__animated animate__fadeInLeft">
-      <img src="@/assets/images/cars/SUV.png" class="h-auto md:hidden " alt="iki taxi">
-      <img src="@/assets/images/cars/SUV.png" class="hidden md:block mx-auto w-full float-right " alt="iki taxi">
-    </div>
-
   </div>
+
+
 </template>
 
 
 <script lang="ts" setup>
-
+/* eslint-disable */
 import WOW from 'wowjs/dist/wow.min';
 import 'animate.css';
+import {onMounted, ref} from "vue";
 
 const wow = new WOW.WOW({
   live: false, // Отключаем автоматическую инициализацию
 });
 
 
+const gifImage = ref<HTMLImageElement | null>(null);
+
+onMounted(() => {
+  if (gifImage.value) {
+    gifImage.value.addEventListener('load', () => {
+      gifImage.value?.classList.add('animated');
+    });
+  }
+});
+
 </script>
+
+
+<style>
+.gif-container img {
+  animation-iteration-count: 1; /* Указывает, что анимация проигрывается только один раз */
+}
+
+.gif-container img.animated {
+  animation-name: playGif;
+}
+
+@keyframes playGif {
+  0% {
+    opacity: 1; /* Начальная прозрачность */
+  }
+  100% {
+    opacity: 0; /* Конечная прозрачность */
+  }
+}
+</style>

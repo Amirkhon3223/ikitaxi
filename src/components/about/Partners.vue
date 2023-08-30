@@ -1,5 +1,5 @@
 <template>
-    <div class="flex my-10 p-4 max-w-7xl mx-auto">
+    <div class="flex my-20 max-w-7xl mx-auto">
         <div class="relative w-6/12 md:w-full sm:w-full flex-col md:items-center md:justify-center ">
             <div v-for="(block, index) in blocks" :key="index" class="mb-14 relative">
                 <div class="absolute h-full w-0.5 bg-gray-900 left-4 top-0"></div>
@@ -10,7 +10,7 @@
             </div>
         </div>
         <div class="hidden md:block md:w-5/12 h-auto items-center">
-            <img src="@/assets/images/cars/topview.png" alt="Company Image" class="flex items-center scale-125" />
+            <img src="@/assets/images/cars/topview.png" alt="Company Image" class="flex items-center scale-125 wow animate__animated animate__fadeInUpBig animate__delay-1s" />
         </div>
     </div>
 </template>

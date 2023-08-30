@@ -1,11 +1,11 @@
 <template>
   <section id="qr">
     <div class="flex flex-col mt-20 mb-10 p-4 max-w-7xl mx-auto md:flex-row items-center space-x-5">
-      <div class="md:w-1/2 mb-6 md:mb-0">
+      <div class="md:w-1/2 mb-6 md:mb-0 wow animate__animated animate__fadeInDown">
         <h2 class="text-3xl font-bold text-center  mb-4">
           {{ $t("application.submitApplication") }}
         </h2>
-        <div class="bg-white rounded-lg p-6 shadow-md">
+        <div class="bg-white rounded-lg p-6 shadow-md ">
           <form @submit.prevent="submitForm">
             <div class="mb-4">
               <label
@@ -60,7 +60,7 @@
         </div>
       </div>
       <div class="md:w-1/2 hidden md:block">
-        <div class="flex justify-center md:justify-end">
+        <div class="flex justify-center md:justify-end wow animate__animated animate__fadeInLeftBig">
           <img src="@/assets/images/cars/compact.png" alt="Фото для заявки" class="max-w-full h-fit"/>
         </div>
       </div>

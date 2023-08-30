@@ -147,5 +147,20 @@
         "yes": "Yes",
         "no": "No",
         "submit": "Send request"
+    },
+    "footer": {
+        "company": "Company",
+        "contact": "Contacts",
+        "aboutUs": "About us",
+        "contactInfoList": "Is a modern and reliable company providing high quality passenger transportation services.",
+        "contacts": [
+            {
+                "text": "Adress:",
+                "value": "Tajikistan, Khujand, 'Rohi Abreshim' Bus Station"
+            },
+            {
+                "text": "Phone number:"
+            }
+        ]
     }
 }

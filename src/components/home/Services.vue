@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 mt-20 animate__animated animate__fadeIn">
+  <div class="max-w-7xl mx-auto sm:px- lg:px-0 py-20 animate__animated animate__fadeIn">
     <div class="max-w-3xl mx-auto text-center pb-12 md:pb-12">
       <h2 class="text-4xl font-bold">
         {{ $t("service.sectionTitle") }}

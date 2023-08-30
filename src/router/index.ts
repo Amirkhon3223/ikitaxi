@@ -2,6 +2,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import HomePage from "@/pages/HomePage.vue";
 import AboutPage from "@/pages/AboutPage.vue";
 import DriverPage from "@/pages/DriverPage.vue";
+import Example from "@/components/home/example.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -18,8 +19,7 @@ const routes: Array<RouteRecordRaw> = [
     path: '/about',
     name: 'about',
     component: AboutPage
-  }
-
+  },
 ]
 
 const router = createRouter({
