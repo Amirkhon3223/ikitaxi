@@ -1,5 +1,6 @@
 <template>
-  <div class="mt-20">
+  <div class="">
+    <HeroSection />
     <DriverPlus />
     <QueryForm />
   </div>
@@ -9,9 +10,10 @@
 
 import DriverPlus from "@/components/driverForm/DriverPlus.vue";
 import QueryForm from "@/components/driverForm/QueryForm.vue";
+import HeroSection from "@/components/home/HeroSection.vue";
 
 export default{
-  components: {QueryForm, DriverPlus}
+  components: {HeroSection, QueryForm, DriverPlus}
 
 }
 </script>
