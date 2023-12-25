@@ -1,0 +1,177 @@
+{
+    "navbar": {
+        "links": [
+            {
+                "name": "Main"
+            },
+            {
+                "name": "services"
+            },
+            {
+                "name": "Advantages"
+            },
+            {
+                "name": "Tariffs"
+            },
+            {
+                "name": "Become a driver"
+            }
+        ]
+    },
+    "heroSection": {
+        "title": "We'll take you where you want",
+        "description": "Travel in comfort and reliability with our taxi service. We offer fast and reliable delivery anywhere in the city. Our goal is to provide you with a safe and enjoyable trip."
+    },
+
+    "service": {
+
+        "sectionTitle": "Services",
+        "sectionDescription": "All of our services to make you as comfortable and convenient as possible",
+        "items": [
+            {
+                "title": "Driver assistance",
+                "titleText": "The driver will help with shopping, lifting heavy items, or other daily tasks"
+            },
+            {
+                "title": "Special requests",
+                "titleText": "Ability to communicate special needs in advance so that the vehicle can be prepared accordingly"
+            },
+            {
+                "title": "Pet transportation",
+                "titleText": "Ability to transport pets using special seating and safe conditions"
+            },
+            {
+                "title": "Female driver",
+                "titleText": "Female customers can afford to book a cab with a female driver."
+            },
+            {
+                "title": "Excursions & Tours",
+                "titleText": "Offering themed tours or excursions so customers can learn more about local attractions"
+            },
+            {
+                "title": "Electronic payments",
+                "titleText": "Ability to pay for the trip using e-wallets or bank cards"
+            }
+        ]
+    },
+
+    "advantage": {
+        "header": "Our achievements",
+        "achievements": [
+            {
+                "title": "Bold Steps Forward",
+                "description": "We started as a small idea, but our determination and dedication led us to big wins. We dared to cross boundaries and offer a game-changing transportation solution."
+            },
+            {
+                "title": "Created unique rates for your comfort.",
+                "description": "We realize that every customer is unique. That's why we offer a variety of plans so you can choose an option that fits your needs and budget."
+            },
+            {
+                "title": "We are proud of our path and look forward to the future",
+                "description": "Every day brings us new challenges and opportunities. We're ready to move forward, do more for you and continue to make a difference in the cab industry."
+            }
+        ]
+    },
+
+    "tariff": {
+        "header": "Tariffs",
+        "headerDescribe": "Our fares are designed to fit your needs and maximize your comfort during your trip. We offer a variety of options including economy options, comfortable cars, freight transportation, and VIP services. Whatever your purpose and preferences, we have the right fare to make your trip enjoyable and convenient.",
+        "plans": [
+            {
+                "title": "Economic",
+                "describe": "Affordable and reliable travel"
+            },
+            {
+                "title": "Comfort",
+                "describe": "Cozy ride with added comfort"
+            },
+            {
+                "title": "Universal",
+                "describe": "An option for all occasions and needs"
+            },
+            {
+                "title": "Cargo",
+                "describe": "Reliable on-time delivery"
+            },
+            {
+                "title": "Mini-van",
+                "describe": "Spacious solution for large groups or families"
+            },
+            {
+                "title": "VIP",
+                "describe": "Luxury, high standard and personalized service"
+            }
+        ]
+    },
+
+    "partners": {
+        "blocks": [
+            {
+                "title": "We are 'iki taxi' company",
+                "description": "Specializing in providing high quality cab services. Our goal is to make your transportation comfortable and reliable."
+            },
+            {
+                "title": "1. Professional drivers:",
+                "description": "Our drivers are experienced and conscientious professionals who ensure your safety and comfort during every trip."
+            },
+            {
+                "title": "2. Variety of routes:",
+                "description": "We provide a wide variety of routes to meet every customer's needs. Whether you need to get to work, the airport or an important event, we will find the best route for you."
+            },
+            {
+                "title": "3. Convenience and speed:",
+                "description": "We value your time, so our ordering system is fast and intuitive. Just select your destination, confirm your order and our cab will be waiting for you on time."
+            }
+        ]
+    },
+    "driverForm": {
+        "header": "Benefits of working with us",
+        "headingText": "Benefits of working with us",
+        "linkText": "Benefits of working with us",
+        "items": [
+            {
+                "title": "High earnings"
+            },
+            {
+                "title": "Unique bonuses and opportunities for career advancement."
+            },
+            {
+                "title": "Attractive promotions and discounts for you and your customers."
+            },
+            {
+                "title": "Quick and convenient access to orders through our platform."
+            },
+            {
+                "title": "A professional team ready to support you in any situation."
+            },
+            {
+                "title": "Opportunity to increase revenue through high order flow."
+            }
+        ]
+    },
+    "application": {
+        "submitApplication": "Send an application for a cab driver job.",
+        "yourName": "Your name",
+        "phoneNumber": "Phone number",
+        "carBrand": "Car brand",
+        "taxiLicense": "Is there a cab license?",
+        "yes": "Yes",
+        "no": "No",
+        "submit": "Send request"
+    },
+    "footer": {
+        "company": "Company",
+        "contact": "Contacts",
+        "aboutUs": "About us",
+        "contactInfoList": "Is a modern and reliable company providing high quality passenger transportation services.",
+        "contacts": [
+            {
+                "text": "Adress:",
+                "value": "Tajikistan, Khujand, 'Rohi Abreshim' Bus Station"
+            },
+            {
+                "text": "Phone number:"
+            }
+        ]
+    }
+}
